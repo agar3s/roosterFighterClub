@@ -1,0 +1,180 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/MediumFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://BattleView.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Font.tres" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/posho1_card.png" type="Texture" id=4]
+[ext_resource path="res://Assets/posho2_card.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 62
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Fight" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BattleView" parent="." instance=ExtResource( 2 )]
+margin_top = 1.0
+margin_bottom = 391.0
+
+[node name="BattleView2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -300.0
+margin_top = -412.0
+margin_right = 297.0
+color = Color( 0.298039, 0.164706, 0.470588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoosterA" type="Control" parent="BattleView2"]
+margin_right = 200.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="BattleView2/RoosterA"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.9727
+margin_top = -94.8208
+margin_right = 369.027
+margin_bottom = 549.179
+rect_scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 4 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="BattleView2/RoosterA"]
+margin_left = 77.9634
+margin_top = 235.085
+margin_right = 120.963
+margin_bottom = 264.085
+custom_fonts/font = ExtResource( 1 )
+text = "BET"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Middle" type="Control" parent="BattleView2"]
+margin_left = 200.0
+margin_top = 36.0
+margin_right = 400.0
+margin_bottom = 336.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BattleStartsIn" type="Label" parent="BattleView2/Middle"]
+anchor_right = 1.0
+margin_top = 22.0
+margin_bottom = 62.0
+custom_fonts/font = ExtResource( 1 )
+text = "BATTLE STARTS IN"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BattleStartsIn2" type="Label" parent="BattleView2/Middle"]
+anchor_right = 1.0
+margin_top = 140.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 2 )
+text = "TOTAL BETS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CountDown" type="Label" parent="BattleView2/Middle"]
+anchor_right = 1.0
+margin_top = 66.0
+margin_bottom = 115.0
+custom_fonts/font = SubResource( 3 )
+text = "00:00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CountDown2" type="Label" parent="BattleView2/Middle"]
+anchor_right = 1.0
+margin_top = 190.0
+margin_bottom = 253.0
+custom_fonts/font = SubResource( 4 )
+text = "1320 vs 2990"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RoosterB" type="Control" parent="BattleView2"]
+margin_left = 400.0
+margin_right = 600.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="BattleView2/RoosterB"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -78.545
+margin_top = -90.064
+margin_right = 371.455
+margin_bottom = 553.936
+rect_scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="BattleView2/RoosterB"]
+margin_left = 80.9634
+margin_top = 236.085
+margin_right = 123.963
+margin_bottom = 265.085
+custom_fonts/font = ExtResource( 1 )
+text = "BET"
+__meta__ = {
+"_edit_use_anchors_": false
+}
